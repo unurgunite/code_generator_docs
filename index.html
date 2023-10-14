@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  File: README
+  
+    &mdash; Documentation by YARD 0.9.34
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "README";
+  relpath = '';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="_index.html">Index</a> &raquo; 
+    <span class="title">File: README</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><div id='filecontents'>
+<h1 id="label-CodeGenerator">CodeGenerator</h1>
+
+<p><img src="https://repobeats.axiom.co/api/embed/cf02cc6438367e8127e0aae8fc871c935844f4e8.svg"></p>
+
+<p>Welcome to the Ruby library which could generate code in any directions you want. It supports flexible settings for your purposes and does not need any requirements.</p>
+
+<h2 id="label-Documentation+content">Documentation content</h2>
+<ol><li>
+<p><a href="https://github.com/unurgunite/code_generator#overview">Overview</a></p>
+</li><li>
+<p><a href="https://github.com/unurgunite/code_generator#installation">Installation</a></p>
+<ol><li>
+<p><a href="https://github.com/unurgunite/code_generator#build-from-source">Build from source</a></p>
+<ol><li>
+<p><a href="https://github.com/unurgunite/code_generator#manual-installation">Manual installation</a></p>
+</li><li>
+<p><a href="https://github.com/unurgunite/code_generator#automatic-installation">Automatic installation</a></p>
+</li></ol>
+</li><li>
+<p><a href="https://github.com/unurgunite/code_generator#build-via-bundler">Build via bundler</a></p>
+</li></ol>
+</li><li>
+<p><a href="https://github.com/unurgunite/code_generator#usage">Usage</a></p>
+</li><li>
+<p><a href="https://github.com/unurgunite/code_generator#todo">Todo</a></p>
+</li><li>
+<p><a href="https://github.com/unurgunite/code_generator#development">Development</a></p>
+</li><li>
+<p><a href="https://github.com/unurgunite/code_generator#requirements">Requirements</a></p>
+<ol><li>
+<p><a href="https://github.com/unurgunite/code_generator#common-usage">Common usage</a></p>
+</li><li>
+<p><a href="https://github.com/unurgunite/code_generator#development-purposes">Development purposes</a></p>
+</li></ol>
+</li><li>
+<p><a href="https://github.com/unurgunite/code_generator#project-style-guide">Project style guide</a></p>
+</li><li>
+<p><a href="https://github.com/unurgunite/code_generator#contributing">Contributing</a></p>
+</li><li>
+<p><a href="https://github.com/unurgunite/code_generator#license">License</a></p>
+</li><li>
+<p><a href="https://github.com/unurgunite/code_generator#code-of-conduct">Code of Conduct</a></p>
+</li></ol>
+
+<h2 id="label-Overview">Overview</h2>
+
+<p>As noted above, this gem . The projects source tree is pretty simple. All of the resources are stored in theirs separate module, so it does code readability much cleaner.</p>
+
+<h2 id="label-Installation">Installation</h2>
+
+<p>Code Generator gem is quite simple to use and install. There are two options to install it — for those who is going to contribute into the project and for those who is going to embed gem to theirs project. See below for each step.</p>
+
+<h3 id="label-Build+from+source">Build from source</h3>
+
+<h4 id="label-Manual+installation">Manual installation</h4>
+
+<p>The manual installation includes installation via command line interface. it is practically no different from what happens during the automatic build of the project:</p>
+
+<pre class="code ruby"><code class="ruby">git clone https://github.com/unurgunite/code_generator.git &amp;&amp; \
+cd code_generator &amp;&amp; \
+bundle install &amp;&amp; \
+gem build code_generator.gemspec &amp;&amp; \
+gem install code-generator-0.1.0.gem
+</code></pre>
+
+<p>Now everything should work fine. Just type <code>irb</code> and <code>require &quot;code_generator&quot;</code> to start working with the library</p>
+
+<h4 id="label-Automatic+installation">Automatic installation</h4>
+
+<p>The automatic installation is simpler but it has at least same steps as manual installation:</p>
+
+<pre class="code ruby"><code class="ruby">git clone https://github.com/unurgunite/code_generator.git &amp;&amp; \
+cd code_generator &amp;&amp; \
+bin/setup
+</code></pre>
+
+<p>If you see <code>irb</code> interface, then everything works fine. The main goal of automatic installation is that you do not need to create your own script to simplify project build and clean up the shell history. Note: you do not need to require projects file after the automatic installation. See <code>bin/setup</code> file for clarity of the statement</p>
+
+<h3 id="label-Build+via+bundler">Build via bundler</h3>
+
+<p>This documentation point is close to those who need to embed the library in their project. Just place this gem to your Gemfile or create it manually via <code>bundle init</code>:</p>
+
+<pre class="code ruby"><code class="ruby"><span class='comment'># Your Gemfile
+</span><span class='id identifier rubyid_gem'>gem</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>code_generator</span><span class='tstring_end'>&#39;</span></span>
+</code></pre>
+
+<p>And then execute:</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_bundle'>bundle</span> <span class='id identifier rubyid_install'>install</span>
+</code></pre>
+
+<p>Or install it yourself for non bundled projects as:</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_gem'>gem</span> <span class='id identifier rubyid_install'>install</span> <span class='id identifier rubyid_code_generator'>code_generator</span>
+</code></pre>
+
+<h2 id="label-Usage">Usage</h2>
+
+<p>All internal docs are available at the separate page: <a href="https://unurgunite.github.io/code_generator_docs">unurgunite.github.io/code_generator_docs</a>/</p>
+
+<p>This gem is really simple to use. It generates methods according to your requests. It uses standard Ruby parameters names for representing them as separate objects:</p>
+<ol><li>
+<p><code>req</code> is a required param</p>
+</li><li>
+<p><code>opt</code> is an optional param</p>
+</li><li>
+<p><code>keyreq</code> is a required keyword param</p>
+</li><li>
+<p><code>key</code> is a keyword param with default value</p>
+</li><li>
+<p><code>block</code> is block</p>
+</li></ol>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_code'>code</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="CodeGenerator.html" title="CodeGenerator (module)">CodeGenerator</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="CodeGenerator/Generator.html" title="CodeGenerator::Generator (class)">Generator</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="CodeGenerator/Generator.html#initialize-instance_method" title="CodeGenerator::Generator#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='label'>public_methods:</span> <span class='lbracket'>[</span><span class='symbol'>:method1</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='symbol'>:method2</span><span class='comma'>,</span> <span class='lbrace'>{</span> <span class='label'>args:</span> <span class='lbracket'>[</span><span class='lbracket'>[</span><span class='symbol'>:req</span><span class='comma'>,</span> <span class='symbol'>:foo</span><span class='rbracket'>]</span><span class='comma'>,</span>
+                                                                                   <span class='lbracket'>[</span><span class='symbol'>:req</span><span class='comma'>,</span> <span class='symbol'>:bar</span><span class='rbracket'>]</span><span class='comma'>,</span>
+                                                                                   <span class='lbracket'>[</span><span class='symbol'>:opt</span><span class='comma'>,</span> <span class='symbol'>:opts</span><span class='comma'>,</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rbracket'>]</span><span class='comma'>,</span>
+                                                                                   <span class='lbracket'>[</span><span class='symbol'>:keyreq</span><span class='comma'>,</span> <span class='symbol'>:some_keyword</span><span class='rbracket'>]</span><span class='comma'>,</span>
+                                                                                   <span class='lbracket'>[</span><span class='symbol'>:key</span><span class='comma'>,</span> <span class='symbol'>:some_key</span><span class='comma'>,</span> <span class='int'>123</span><span class='rbracket'>]</span><span class='comma'>,</span>
+                                                                                   <span class='lbracket'>[</span><span class='symbol'>:block</span><span class='comma'>,</span> <span class='symbol'>:some_block</span><span class='rbracket'>]</span><span class='rbracket'>]</span><span class='comma'>,</span>
+                                                                            <span class='label'>should_return:</span> <span class='int'>123</span> <span class='rbrace'>}</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='symbol'>:method3</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='label'>should_return:</span> <span class='const'>Integer</span><span class='comma'>,</span> <span class='label'>generate:</span> <span class='kw'>true</span><span class='rparen'>)</span>
+<span class='id identifier rubyid_code'>code</span><span class='period'>.</span><span class='id identifier rubyid_generate_code'>generate_code</span> <span class='comment'>#=&gt; [:method1, [:method2, {:args=&gt;[[:req, :foo], [:req, :bar], [:opt, :opts, {}], [:keyreq, :some_keyword], [:key, :some_key, 123], [:block, :some_block]], :should_return=&gt;123}], :method3]
+</span><span class='id identifier rubyid_code'>code</span><span class='period'>.</span><span class='id identifier rubyid_methods'>methods</span><span class='lparen'>(</span><span class='kw'>false</span><span class='rparen'>)</span> <span class='comment'>#=&gt; [:method1, :method2, :method3]
+</span><span class='id identifier rubyid_code'>code</span><span class='period'>.</span><span class='id identifier rubyid_method1'>method1</span> <span class='comment'>#=&gt; 724835356767704
+</span><span class='id identifier rubyid_code'>code</span><span class='period'>.</span><span class='id identifier rubyid_method2'>method2</span><span class='lparen'>(</span><span class='int'>1</span><span class='comma'>,</span> <span class='lbrace'>{</span> <span class='label'>foo:</span> <span class='int'>555</span> <span class='rbrace'>}</span><span class='comma'>,</span> <span class='label'>some_keyword:</span> <span class='int'>345</span><span class='rparen'>)</span> <span class='comment'>#=&gt; 123
+</span><span class='id identifier rubyid_code'>code</span><span class='period'>.</span><span class='id identifier rubyid_method3'>method3</span> <span class='comment'>#=&gt; 724835356767704 # random objects will be fixed in next release
+</span>
+<span class='id identifier rubyid_code'>code</span><span class='period'>.</span><span class='id identifier rubyid_method'>method</span><span class='lparen'>(</span><span class='symbol'>:method2</span><span class='rparen'>)</span> <span class='comment'>#=&gt; #&lt;Method: #&lt;CodeGenerator::Generator:0x000055b27b207758 @public_methods=[:method1, [:method2, {:args=&gt;[[:req, :foo], [:req, :bar], [:opt, :opts, {}], [:keyreq, :some_keyword], [:key, :some_key, 123], [:block, :some_block]], :should_return=&gt;123}], :method3], @public_class_methods=nil, @private_methods=nil, @private_class_methods=nil, @should_return=Integer, @generate=true&gt;.method2(foo, bar, opts=..., some_keyword:, some_key: ..., &amp;some_block) /home/ruby/code_generator/lib/code_generator/generator.rb:99&gt;
+</span><span class='id identifier rubyid_code'>code</span><span class='period'>.</span><span class='id identifier rubyid_method'>method</span><span class='lparen'>(</span><span class='symbol'>:method2</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_parameters'>parameters</span> <span class='comment'># =&gt; [[:req, :foo], [:req, :bar], [:opt, :opts], [:keyreq, :some_keyword], [:key, :some_key], [:block, :some_block]]
+</span></code></pre>
+
+<h2 id="label-TODO">TODO</h2>
+<ul><li>
+<p>[x] Add support for public methods</p>
+</li><li>
+<p>[ ] Add support for public public class methods</p>
+</li><li>
+<p>[ ] Add support for public private methods</p>
+</li><li>
+<p>[ ] Add support for public private class methods</p>
+</li></ul>
+
+<h2 id="label-Development">Development</h2>
+
+<p>After checking out the repo, run <code>bin/setup</code> to install dependencies. Then, run <code>rake test</code> to run the tests. You can also run <code>bin/console</code> for an interactive prompt that will allow you to experiment.</p>
+
+<p>To install this gem onto your local machine, run <code>bundle exec rake install</code>. To release a new version, update the version number in <code>version.rb</code>, and then run <code>bundle exec rake release</code>, which will create a git tag for the version, push git commits and the created tag, and push the <code>.gem</code> file to <a href="https://rubygems.org">rubygems.org</a>.</p>
+
+<h2 id="label-Requirements">Requirements</h2>
+
+<p>This section will show dependencies which are used in the project. This section splits in two other sections — requirements for common use and requirements for the development purposes.</p>
+
+<h3 id="label-Common+use">Common use</h3>
+
+<p>The <code>code_generator</code> gem does not have any requirements</p>
+
+<h3 id="label-Development+purposes">Development purposes</h3>
+
+<p>For the development purposes <code>code_generator</code> gem uses:</p>
+
+<p>| Dependencies | Description | |———————-|——————————————————————————————| | <a href="https://rubygems.org/gems/rspec">RSpec</a> | The RSpec gem is used for test which are located in a separate folder under <code>spec</code> name. | | <a href="https://rubygems.org/gems/rubocop">RuboCop</a> | The RuboCop gem is used for code formatting. | | <a href="https://rubygems.org/gems/rake">Rake</a> | The Rake gem is used for building tasks as generating documentation. | | <a href="https://rubygems.org/gems/rubocop-rspec">rubocop-rspec</a> | The rubocop-rspec gem is used for formatting specs. | | <a href="https://rubygems.org/gems/yard">YARD</a> | The YARD gem is used for the documentation. |</p>
+
+<h2 id="label-Project+style+guide">Project style guide</h2>
+
+<p>To make the code base much cleaner gem has its own style guides. They are defined in a root folder of the gem in a <a href="https://github.com/unurgunite/code_generator/blob/master/CONTRIBUTING.md">CONTRIBUTING.md</a> file. Check it for more details.</p>
+
+<h2 id="label-Contributing">Contributing</h2>
+
+<p>Bug reports and pull requests are welcome on GitHub at <a href="https://github.com/unurgunite/code_generator">github.com/unurgunite/code_generator</a>. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the <a href="https://github.com/unurgunite/code_generator/blob/master/CODE_OF_CONDUCT.md">code of conduct</a>. To contribute you should fork this project and create there new branch:</p>
+
+<pre class="code ruby"><code class="ruby">git clone https://github.com/your-beautiful-username/code_generator.git &amp;&amp; \
+git checkout -b refactor &amp;&amp; \
+git commit -m &quot;Affected new changes&quot; &amp;&amp; \
+git push origin refactor
+</code></pre>
+
+<p>And then make new pull request with additional notes of what you have done. The better the changes are scheduled, the faster the PR will be checked.</p>
+
+<h2 id="label-Code+of+Conduct">Code of Conduct</h2>
+
+<p>Everyone interacting in the <code>CodeGenerator</code> project&#39;s codebases, issue trackers, chat rooms and mailing lists is expected to follow the <a href="https://github.com/unurgunite/code_generator/blob/master/CODE_OF_CONDUCT.md">code of conduct</a>.</p>
+
+<h2 id="label-License">License</h2>
+
+<p>The gem is available as open source under the terms of the <a href="https://opensource.org/licenses/GPL-3.0">GPLv3 License</a>. The copy of the license is stored in project under the <code>LICENSE.txt</code> file name: <a href="https://github.com/unurgunite/code_generator/blob/master/LICENSE.txt">copy of the License</a></p>
+
+<p>The documentation is available as open source under the terms of the <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0 License</a></p>
+
+<p>The other libs are available as open source under the terms of the <a href="https://opensource.org/licenses/BSD-3-Clause">New BSD License</a></p>
+
+<p><img src="https://www.gnu.org/graphics/gplv3-or-later.png"> <img src="https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-nc.svg"> <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/License_icon-bsd-88x31.png"></p>
+</div></div>
+
+      <div id="footer">
+  Generated on Sun Oct 15 01:12:06 2023 by
+  <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.34 (ruby-2.7.6).
+</div>
+
+    </div>
+  </body>
+</html>
