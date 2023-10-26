@@ -211,7 +211,7 @@
     
 <p><tt>CodeGenerator::Generator#new</tt>                 -&gt; CodeGenerator::Generator</p>
 
-<p>This object constructor helps to easily create class with stubbed methods (with support of public, public singleton, private and private singleton methods and their params). For e.g., we want to create a class which have several public methods: If you want to pass arguments, you can pass it according the following signature. Note that only <code>:opt</code> and <code>:key</code> variables can be predefined (by default they would be nil), also <code>:block</code> variable could be presented only once for each method: If you want to specify returnable object, you can pass it inside <code>:should_return</code> key. Also you can pass class names, but method would return class itself. Note that <tt>shout</tt>return+ and <code>generate</code> args passed as options for specific method would override global values of this two args:</p>
+<p>This object constructor helps to easily create class with stubbed methods (with support of public, public singleton, private and private singleton methods and their params). For e.g., we want to create a class which has several public methods: If you want to pass arguments, you can pass it according the following signature. Note that only <code>:opt</code> and <code>:key</code> variables can be predefined (by default they would be nil), also <code>:block</code> variable could be presented only once for each method: If you want to specify returnable object, you can pass it inside <code>:should_return</code> key. Also you can pass class names, but method would return class itself. Note that <tt>shout</tt>return+ and <code>generate</code> args passed as options for specific method would override global values of this two args:</p>
 
 
   </div>
@@ -272,18 +272,18 @@ code.method1 #=&gt; some random Integer</code></pre>
       <pre class="lines">
 
 
+42
+43
 44
 45
 46
 47
 48
 49
-50
-51
-52</pre>
+50</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/code_generator/generator.rb', line 44</span>
+      <pre class="code"><span class="info file"># File 'lib/code_generator/generator.rb', line 42</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='label'>public_methods:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>public_class_methods:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>private_methods:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>private_class_methods:</span> <span class='kw'>nil</span><span class='comma'>,</span>
                <span class='label'>should_return:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>generate:</span> <span class='kw'>false</span><span class='rparen'>)</span>
@@ -332,13 +332,13 @@ code.method1 #=&gt; some random Integer</code></pre>
       <pre class="lines">
 
 
+55
+56
 57
-58
-59
-60</pre>
+58</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/code_generator/generator.rb', line 57</span>
+      <pre class="code"><span class="info file"># File 'lib/code_generator/generator.rb', line 55</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_generate_code'>generate_code</span>
   <span class='id identifier rubyid_generate_public_methods'>generate_public_methods</span>
@@ -354,7 +354,7 @@ code.method1 #=&gt; some random Integer</code></pre>
 </div>
 
       <div id="footer">
-  Generated on Sun Oct 15 20:00:25 2023 by
+  Generated on Fri Oct 27 01:33:55 2023 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.34 (ruby-2.7.6).
 </div>
